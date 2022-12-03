@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useContext } from 'react';
+import toast from 'react-hot-toast';
 
 import { usercontext } from '../Contex/Authcontext';
 import loginimg from './Assests/Authentication.gif'
@@ -14,6 +15,8 @@ const login = () => {
     const password = e.target.password.value
     login(email,password)
     .then( res => {
+        toast.success('Login Success')
+        console.log(res);
         
     })
  }

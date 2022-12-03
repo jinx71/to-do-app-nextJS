@@ -1,30 +1,36 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useContext } from "react";
 import { usercontext } from "../Contex/Authcontext";
+import singupimg from './Assests/singup.png'
+
 
 const singup = () => {
-  const {createuser,user,userproflie,logout} = useContext(usercontext)
+    const { createuser, user, userproflie, logout } = useContext(usercontext)
 
 
-  const handelsingup = (e) => {
-    e.preventDefault()
-    const email = e.target.email.value
-    const password = e.target.password.value
-    const name = e.target.name.value
-    createuser(email, password)
-    .then((res) => {
-        userproflie(name)
-    })
-  }
+    const handelsingup = (e) => {
+        e.preventDefault()
+        const email = e.target.email.value
+        const password = e.target.password.value
+        const name = e.target.name.value
+        createuser(email, password)
+            .then((res) => {
+                userproflie(name)
+            })
+    }
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="text-center lg:text-left">
+            <div className="hero min-h-screen  bg-white">
+                <div className="hero-content flex-col lg:flex-row-reverse shadow-2xl w-[90%] mx-auto">
+                    <div className="">
                         <h1 className="text-5xl font-bold">Sing Up</h1>
-                            {
-                                user?.email ? <button onClick={logout}>Logout</button> : <h1>no user</h1>
-                            }
+                        <p className="font-serif">
+                            Welcome to the TO Do Web.
+                            Please sing up to continue.
+                        </p>
+                      
+                        <Image src={singupimg} alt="loginimg" className='lg:w-[50%] w-[90%]'/>     
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form className="card-body" onSubmit={handelsingup}>
@@ -44,7 +50,7 @@ const singup = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="text" placeholder="password" className="input input-bordered"  name="password"/>
+                                <input type="text" placeholder="password" className="input input-bordered" name="password" />
                                 <label className="label">
                                     <Link href="/login"> Have Account ? Login</Link>
                                 </label>
