@@ -3,15 +3,17 @@ import { useContext } from "react";
 import { usercontext } from "../Contex/Authcontext";
 
 const singup = () => {
-  const {createuser} = useContext(usercontext)
+  const {createuser,user,userproflie,logout} = useContext(usercontext)
 
 
   const handelsingup = (e) => {
     e.preventDefault()
     const email = e.target.email.value
     const password = e.target.password.value
+    const name = e.target.name.value
     createuser(email, password)
-    .then((userCredential) => {
+    .then((res) => {
+        userproflie(name)
     })
   }
     return (
@@ -20,7 +22,9 @@ const singup = () => {
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold">Sing Up</h1>
-
+                            {
+                                user?.email ? <button onClick={logout}>Logout</button> : <h1>no user</h1>
+                            }
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form className="card-body" onSubmit={handelsingup}>
