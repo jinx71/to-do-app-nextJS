@@ -1,13 +1,24 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import toast from 'react-hot-toast';
-
+import Router from 'next/router';
 import { usercontext } from '../Contex/Authcontext';
 import loginimg from './Assests/Authentication.gif'
 
-const login = () => {
-    // const { login } = useContext(usercontext)
+const Login = () => {
+    const { user, login } = useContext(usercontext)
+    useEffect(() => {
+        if (user) {
+            Router.push("/home");
+        } else if (user == null) {
+            Router.push({
+                pathname: '/login'
+            }
+            )
+        }
+    }
+        , [user])
     const handellogin = (e) => {
 
         e.preventDefault()
@@ -54,4 +65,4 @@ const login = () => {
     );
 };
 
-export default login;
+export default Login;

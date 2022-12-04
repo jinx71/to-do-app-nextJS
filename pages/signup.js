@@ -5,8 +5,8 @@ import { usercontext } from "../Contex/Authcontext";
 import singupimg from './Assests/singup.png'
 
 
-const singup = () => {
-    // const { createuser, user, userproflie, logout } = useContext(usercontext)
+const Singup = () => {
+    const { createuser, user, userproflie, logout } = useContext(usercontext)
 
 
     const handelsingup = (e) => {
@@ -66,4 +66,4 @@ const singup = () => {
     );
 };
 
-export default singup;
+export default Singup;
