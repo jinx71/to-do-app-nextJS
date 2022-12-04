@@ -45,8 +45,9 @@ const Home = () => {
             )
         }
         const interval = setInterval(() => {
-            const a = (timeConvert(dateTime()[0]))
-            setTime.value = a;
+
+            const timeData = (timeConvert(dateTime()[0]))
+            setTime.value = timeData;
         }, 1000);
         return () => clearInterval(interval);
     }, [user]);
