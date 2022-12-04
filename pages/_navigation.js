@@ -8,7 +8,7 @@ const Navigation = () => {
             </div>
             <div className="flex-none">
                 <ul className="menu menu-horizontal p-0">
-                    <li><Link href="/home">Home</Link></li>
+                    {true && <li><Link href="/home">Home</Link></li>}
 
                     <li><Link href="/login">Login</Link></li>
                     <li><Link href="/signup">Signup</Link></li>
