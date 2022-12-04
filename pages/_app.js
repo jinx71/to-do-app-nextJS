@@ -1,16 +1,21 @@
 import Navigation from './_navigation'
 import Footer from './_footer'
+
+import Authcontext from '../Contex/Authcontext'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
-  return <>
+  return (
+    <Authcontext>
+      <Navigation></Navigation>
 
-    <Navigation></Navigation>
 
-    <Component {...pageProps} />
+      <Component {...pageProps} />
 
-    <Footer></Footer>
-  </>
+      <Footer></Footer>
+
+    </Authcontext>
+  )
 }
 
 export default MyApp
