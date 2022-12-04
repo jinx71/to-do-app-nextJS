@@ -10,17 +10,17 @@ export default function Home() {
         <input type="text" placeholder="Type here" className="input input-bordered input-primary w-full max-w-xs" />
         <br />
         <button type="submit" className="btn btn-primary mt-2">Submit</button>
-        <div className="card my-10 mx-20 bg-green-200 text-black">
-          <div className="card-body items-center text-center">
-            <h2 className="card-title">Task Name</h2>
-            <p>Task description</p>
-            <div className="card-actions">
-              <button className="btn btn-primary">Done</button>
-              <button className="btn btn-ghost">Delete</button>
-            </div>
+      </form>
+      <div className="card my-10 mx-20 bg-green-200 text-black">
+        <div className="card-body items-center text-center">
+          <h2 className="card-title">Task Name</h2>
+          <p>Task description</p>
+          <div className="card-actions">
+            <button className="btn btn-primary">Done</button>
+            <button className="btn btn-ghost">Delete</button>
           </div>
         </div>
-      </form>
+      </div>
     </div>
   )
 }
