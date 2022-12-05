@@ -24,10 +24,10 @@ const Singup = () => {
             <div className="hero min-h-screen  bg-white">
                 <div className="hero-content flex-col lg:flex-row-reverse shadow-2xl w-[90%] mx-auto">
                     <div className="text-center">
-                        <h1 className="text-5xl font-bold">Sing Up</h1>
-                        <p className="">
-                            Welcome to the TO Do Web.
-                            Please sing up to continue.
+                        <h1 className="text-5xl font-bold">Sign Up</h1>
+                        <p className="pt-5">
+                            Welcome to the To Do App.
+                            Please sign up to continue.
                         </p>
 
                         <Image src={singupimg} alt="loginimg" className='lg:w-[50%] w-[90%] mx-auto' />
