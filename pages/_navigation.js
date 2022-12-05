@@ -17,8 +17,9 @@ const Navigation = () => {
                 <ul className="menu menu-horizontal p-0">
                     {user && user.uid ? <li><Link href="/home">Home</Link></li> : null}
 
-                    {user && user.uid ? <li><Link onClick={logout} href="/login">Logout</Link></li> : <li><Link href="/login">Login</Link></li>}
-                    <li><Link href="/signup">Signup</Link></li>
+                    {user && user.uid ? <li><Link onClick={logout} href="/login">Logout</Link></li> : <>
+                        <li><Link href="/login">Login</Link></li> <li><Link href="/signup">Signup</Link></li>
+                    </>}
                 </ul>
             </div>
             <div className="flex-end">{user?.email}</div>

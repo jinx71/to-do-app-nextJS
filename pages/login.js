@@ -50,9 +50,9 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="text" placeholder="password" className="input input-bordered" name='password' />
+                            <input type="password" placeholder="password" className="input input-bordered" name='password' />
                             <label className="label">
-                                <Link href="/singup">Create a Account</Link>
+                                <Link href="/signup">Create a Account</Link>
                             </label>
                         </div>
                         <div className="form-control mt-6">
