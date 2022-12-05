@@ -1,5 +1,6 @@
 
 import Image from 'next/image'
+import homeImg from './Assests/undraw_Reminder_re_fe15.png'
 // import styles from '../styles/Home.module.css'
 // import Home from './home'
 
@@ -13,7 +14,7 @@ export default function Home() {
         </div>
         <div className="card flex-shrink-0 w-xl shadow-2xl bg-base-100 shadow-teal-200">
           <div className="card-body">
-            <Image src='/../public/undraw_Reminder_re_fe15.png' width={500} height={500} alt=''></Image>
+            <Image src={homeImg} width={500} height={500} alt=''></Image>
           </div>
         </div>
       </div>
